@@ -2,32 +2,30 @@ var Javabuzz = function(){};
 
 Javabuzz.prototype.says = function(number) {
 
-  if (this._isDivisibleByFifteen(number)) {
+  if (this.isDivisibleByFifteen(number)) {
     return 'fizzbuzz';
   }
-  if (this._isDivisibleByFive(number)) {
+  if (this.isDivisibleByFive(number)) {
     return 'buzz';
   }
-  if (this._isDivisibleByThree(number)) {
+  if (this.isDivisibleByThree(number)) {
     return 'fizz';
   }
   return number;
-}
-
-Javabuzz.prototype._isDivisibleByThree = function(number) {
-  if (number % 3 === 0) {
-    return true
-  }
 };
 
-Javabuzz.prototype._isDivisibleByFive = function(number) {
-  if (number % 5 === 0) {
-    return true
-  }
+Javabuzz.prototype.isDivisibleByThree = function(number) {
+  return this._isDivisibleBy(number, 3);
 };
 
-Javabuzz.prototype._isDivisibleByFifteen = function(number) {
-  if (number % 15 === 0) {
-    return true
-  }
+Javabuzz.prototype.isDivisibleByFive = function(number) {
+  return this._isDivisibleBy(number, 5);
 };
+
+Javabuzz.prototype.isDivisibleByFifteen = function(number) {
+  return this._isDivisibleBy(number, 15);
+};
+
+Javabuzz.prototype._isDivisibleBy = function(number, divisor) {
+ return (number % divisor === 0 );
+ };

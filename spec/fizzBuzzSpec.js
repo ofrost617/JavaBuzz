@@ -10,19 +10,19 @@ describe('Javabuzz', function() {
 
     it('divsible by 3', function() {
 
-      expect(javabuzz.isDivisibleByThree(3)).toBe('fizz');
+      expect(javabuzz.says(3)).toBe('fizz');
     });
 
 
     it('divisible by 5', function() {
 
-      expect(javabuzz.isDivisibleByFive(5)).toBe('buzz');
+      expect(javabuzz.says(5)).toBe('buzz');
     });
 
 
     it('divisible by 15', function() {
 
-      expect(javabuzz.isDivisibleByFifteen(15)).toBe('fizzbuzz');
+      expect(javabuzz.says(15)).toBe('fizzbuzz');
     });
 
 
@@ -32,17 +32,17 @@ describe('Javabuzz', function() {
 
     it('divsible by 3', function() {
 
-      expect(javabuzz.isDivisibleByThree(1)).toBe(1);
+      expect(javabuzz.says(1)).toBe(1);
     });
 
     it('divsible by 5', function() {
 
-      expect(javabuzz.isDivisibleByFive(1)).toBe(1);
+      expect(javabuzz.says(1)).toBe(1);
     });
 
     it('divisible by 15', function() {
 
-      expect(javabuzz.isDivisibleByFifteen(20)).toBe(20);
+      expect(javabuzz.says(7)).toBe(7);
     });
 
 
