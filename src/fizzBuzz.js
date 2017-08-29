@@ -1,6 +1,6 @@
 var Javabuzz = function(){};
 
-Javabuzz.prototype.isDivisibleBy = function(number) {
+Javabuzz.prototype._isDivisibleBy = function(number) {
   if (number % 15 === 0) {
     return 'fizzbuzz'
   } else if (number % 3 === 0) {
