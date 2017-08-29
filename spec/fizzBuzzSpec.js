@@ -1,4 +1,4 @@
-describe('Fizzbuzz', function() {
+describe('Javabuzz', function() {
 
   var javabuzz;
 
